@@ -14,15 +14,10 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/style1.css" />
 <link rel="stylesheet" type="text/css" href="stylesheets/style_common.css" />
 <!-- Stylesheets -->
-		
-		
-		
 		<link href="litebox-master/assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
 		
-
-	<!-- The Menu -->
+		<!-- The Menu -->
 	<link href="stylesheets/styles.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="pe-icon-7-stroke/css/pe-icon-7-stroke.css">
 
 	<!-- Optional - Adds useful class to manipulate icon font display -->
 	<link rel="stylesheet" href="pe-icon-7-stroke/css/helper.css">
@@ -41,6 +36,9 @@
 <!---->
 <div class="header">
 	 <div class="container">
+	 <div class="logo">
+			 <a href="index.php"><h2>&lt;Google Art & Culture Mod&gt;</h2></a>
+			 </div>
 		 <div class="top-menu">
 				<span class="menu"> </span>
 				<ul>
@@ -63,7 +61,7 @@
 <div class="gallery-head">
 	 <div class="gallery-info">
 		 <div class="container">
-			 <a href="gallery.php">Home/</a><h2>Gallery</h2>			 
+			 <a href="index.php">Home/</a><h2>Gallery</h2>			 
 		 </div>		 
 	 </div>
 	 <div class="gallery-text">

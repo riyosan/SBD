@@ -103,8 +103,7 @@ else
             </div>
         </div>
     </div>
-    <div align="center">
-Develop By <a href="https://www.youtube.com/channel/UCW8P_Q9V4YfGmLtNZRcO8wQ" target="_blank">&lt;DOTCODE&gt;</a></div>
+    
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
 
