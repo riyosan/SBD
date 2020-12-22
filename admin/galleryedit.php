@@ -5,14 +5,13 @@ if(isset($_SESSION['uname']))
 <?php include "header1.php"; ?>
 <?php include "menu/amenu2.php"; ?>
 <?php 
-$mykey1=$_REQUEST['key0'];
 $mykey2=$_REQUEST['key1'];
 $mykey3=$_REQUEST['key2'];
 ?>
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Update Album</h1>
+                    <h1 class="page-header">Update gallery</h1>
                 </div>
                 
                 <!-- /.col-lg-12 -->
@@ -62,7 +61,7 @@ echo "<script>location.href='viewallalbums.php'</script>";
                                        
                                         <div class="form-group">
                                             <label>Album Name or Title</label>
-                                            <input class="form-control" placeholder="Enter Title" name="aname" value="<?= $mykey2 ?>">
+                                            <input class="form-control" placeholder="Enter Title" name="aname" value="<? echo $mykey2 ?>">
                                                 <p class="help-block">Example "Friendship day"</p>
                                         
                                         </div>
@@ -70,7 +69,7 @@ echo "<script>location.href='viewallalbums.php'</script>";
                                         
                                             <label>Event Description</label>
                                              <p class="help-block" style="font-weight:bold">Max 1000 Character Allow </p>
-                                             <textarea class="form-control" rows="3" placeholder="Enter Description" name="adesc" maxlength="1000"><?= $mykey3 ?></textarea>
+                                             <textarea class="form-control" rows="3" placeholder="Enter Description" name="adesc" maxlength="1000"><? echo $mykey3 ?></textarea>
                                             
                                                
                                         
@@ -80,7 +79,6 @@ echo "<script>location.href='viewallalbums.php'</script>";
                                         
                                         <button type="submit" class="btn btn-primary" name="submit">Submit Button</button>
                                         <button type="reset" class="btn btn-default">Reset Button</button>
-                                        <button type="cancel" class="btn btn-default" href="viewallalbums.php" name="submit">Cancel</button>
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
