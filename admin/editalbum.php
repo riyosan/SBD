@@ -71,10 +71,8 @@ echo "<script>location.href='viewallalbums.php'</script>";
                                             <label>Event Description</label>
                                              <p class="help-block" style="font-weight:bold">Max 1000 Character Allow </p>
                                              <textarea class="form-control" rows="3" placeholder="Enter Description" name="adesc" maxlength="1000"><?= $mykey3 ?></textarea>
-                                            
-                                               
-                                        
                                         </div>
+                                    
                                        
                                        
                                         

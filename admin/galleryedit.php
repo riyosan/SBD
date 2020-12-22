@@ -3,7 +3,7 @@ if(isset($_SESSION['uname']))
 {
 ?>
 <?php include "header1.php"; ?>
-<?php include "menu/amenu2.php"; ?>
+<?php include "menu/amenu1.php"; ?>
 <?php 
 $mykey2=$_REQUEST['key1'];
 $mykey3=$_REQUEST['key2'];
@@ -11,39 +11,41 @@ $mykey3=$_REQUEST['key2'];
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Update gallery</h1>
+                    <h1 class="page-header">Add Album</h1>
                 </div>
                 
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <script type="application/javascript">
-function img_up(){var fup = document.getElementById('upload');var fileName = fup.value;var ext = fileName.substring(fileName.lastIndexOf('.') + 1);if(ext == "JPEG" || ext == "jpeg" || ext == "jpg" || ext == "JPG" || ext== "PNG" ||  ext=="png"){return true;}else{alert("Image format not supported!");fup.focus();return false;}}</script>
-<?php
-//echo $user;
+            <?php
 if(isset($_POST['submit']))
 {
-$aname = $_POST['aname'];
-$adesc = $_POST['adesc'];
+$aname = $_POST['gimages'];
 $adate = date('Y-m-d H:i:s');
 $status='progress';
-// This is the temporary file created by PHP
-if (empty($aname))
 
+
+if (empty($aname))
 {
  echo " <div class='alert alert-danger'><strong>ERROR</strong> - Empty fields are not allowed !</div>"; 
- 
-}
+ }
 else
 {
-
 include "connect.php";
 
-mysql_query("update tbl_album set name='$aname',adesc='$adesc' where albumid = '$mykey1'");
-echo "<script>location.href='viewallalbums.php'</script>";
-//echo " <div class='alert alert-success'>Your New Event Is Successfully Added. <a href='viewallevents.php'>View events</a> |<a href='addevent.php'> Add new events</a></div>";
+$query="update tbl_gallery set gimages='$aname' where gid = '$mykey2'";
+if(mysql_query($query))
+	{
+echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <a href='viewsgimages.php'>View albums</a> |<a href='addevent.php'> Add new album</a></div>";
+	}
+	else
+	{
+		echo "error";
+		print mysql_error();
+	}
 
-}
+// echo "<script>location.href='addevent.php </script";
+   }
 }	
 ?>
 
@@ -52,31 +54,22 @@ echo "<script>location.href='viewallalbums.php'</script>";
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Fill This Form To Add Album
+                            Fill This Form To Add Album (Only upload jpg files only)
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form action="#" method="post" enctype="multipart/form-data" name="upload">
-                                       
+                                     
                                         <div class="form-group">
-                                            <label>Album Name or Title</label>
-                                            <input class="form-control" placeholder="Enter Title" name="aname" value="<? echo $mykey2 ?>">
-                                                <p class="help-block">Example "Friendship day"</p>
-                                        
-                                        </div>
-                                       <div class="form-group">
                                         
                                             <label>Event Description</label>
                                              <p class="help-block" style="font-weight:bold">Max 1000 Character Allow </p>
-                                             <textarea class="form-control" rows="3" placeholder="Enter Description" name="adesc" maxlength="1000"><? echo $mykey3 ?></textarea>
+                                             <textarea class="form-control" rows="3" placeholder="Enter Description" name="gimages" maxlength="1000"></textarea>
                                             
                                                
                                         
                                         </div>
-                                       
-                                       
-                                        
                                         <button type="submit" class="btn btn-primary" name="submit">Submit Button</button>
                                         <button type="reset" class="btn btn-default">Reset Button</button>
                                     </form>
